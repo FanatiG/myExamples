@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>titlePlaceholder</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../style/mainPage.css">
+</head>
+
+<body>
+	<nav>
+		<a>Перейти</a>
+		<a href='./secondPage.html'>Перейти</a>
+		<a href='./thirdPage.html'>Перейти</a>
+	</nav>
+	<menu>
+		<ul class="list" type='none'>
+			<li><a onclick="window.open('//habr.com/ru/post/266895/')">progress bar</a></li>
+			<li><a onclick="window.open('#')">drag'n'drop</a></li>
+			<li><a onclick="window.open('#')">nodes</a></li>
+			<li>пункт меню</li>
+		</ul>
+	</menu>
+	<section>
+		<div class="progress">
+			<progress id="progress" max="100" value="0"></progress>
+			<div class="progress-value"></div>
+			<div id="progress-bg" class="progress-bg">
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<button onclick="startButton()" id='start'>GO</button>
+		<button onclick="stopButton()" id='stop'>STOP</button>
+		<button onclick="resetButton()" id='stop'>RESET</button>
+	</section>
+	<section class="horizontalPlacement">
+		<div class="frame">
+			<div class="insides" id="1">1</div>
+		</div>
+		<div class="frame">
+			<div class="insides">2</div>
+		</div>
+		<div class="frame">
+			<div class="insides">3</div>
+		</div>
+	</section>
+	<section>
+		<input type="text" size="50" id="submitSpace" autocomplete="off">
+		<ul id="forInput">
+		</ul>
+	</section>
+	<section>
+
+	</section>
+	<script src="../src/main.js"></script>
+</body>
+
+</html>

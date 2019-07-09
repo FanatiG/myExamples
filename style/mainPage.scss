@@ -1,0 +1,183 @@
+@for $i from 0 through 100 {
+  .progress progress[value="#{$i}"] {
+    &+.progress-value:before {
+      content : '#{$i}%'
+    }
+
+    &~.progress-bg .progress-bar {
+      width: $i * 1%
+    }
+  }
+}
+
+.progress {
+  font: 12px Arial, Tahoma, sans-serif;
+  position: relative;
+  overflow: hidden;
+
+  progress {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    left: -777px;
+  }
+}
+
+.progress-value {
+  color: rgb(255, 255, 255);
+  display: block;
+  line-height: 21px;
+  // text-align: center;
+  margin-left: 500px;
+}
+
+.progress-bg {
+  background: #e6e9ed;
+  position: relative;
+  height: 15px;
+  width: 50%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@keyframes progress_bar {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -40px 0;
+  }
+}
+
+.progress-bar {
+  overflow: hidden;
+  background: #ac92ec;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  -webkit-transition: width 0.05s linear;
+  -moz-transition: width 0.05s linear;
+  -ms-transition: width 0.05s linear;
+  transition: width 0.05s linear;
+
+  &:after {
+    -webkit-animation: progress_bar 0.8s linear infinite;
+    -moz-animation: progress_bar 0.8s linear infinite;
+    -ms-animation: progress_bar 0.8s linear infinite;
+    -o-animation: progress_bar 0.8s linear infinite;
+    animation: progress_bar 0.8s linear infinite;
+
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+li a {
+  cursor: pointer;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+html {
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+}
+
+menu {
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+.horizontalPlacement {
+  display: inline-flex;
+}
+
+.frame {
+  height: 300px;
+  width: 300px;
+  background-color: grey;
+  margin: 10px;
+}
+
+.insides {
+  text-align: center;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  color: black;
+  border: 3px solid grey;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  overflow: hidden;
+  background: transparent;
+  transition: height 0.5s linear;
+
+  &:after {
+    animation: progress_bar 0.8s linear infinite;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#forInput {
+  background-color: white;
+  color: black;
+  width: max-content;
+  min-width: 25%;
+}
+
+.textRemove {
+  outline: none;
+  float: right;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+// .textRemove:hover {
+//   box-shadow: 0 0px 40px 0 rgba(0,0,0,1), 0 0px 50px 0 rgba(0,0,0,1);
+// }
