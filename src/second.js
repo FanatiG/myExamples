@@ -10,10 +10,11 @@ function removeText1() {
 document.getElementById("firstInput").addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         if (document.getElementById("firstInput").value.toLowerCase() ==
-            document.getElementById("firstInput").value.split("").reverse().join("").toLowerCase()) {
+            document.getElementById("firstInput").value.toLowerCase().split("").reverse().join("")) {
             document.getElementById("isPoly").innerHTML = "POLYNDROM!";
             return true;
         } else {
+            document.getElementById("isPoly").innerHTML = "NOT POLYNDROM!";
             return false;
         }
     }

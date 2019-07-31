@@ -1,24 +1,36 @@
-html {
-    background-color: rgba( 0, 0, 0, 1);
-    color: white;
-};
-a:link {
-    color: white;
-  }
-  a:visited {
-    color: white;
-  }
-  a:hover {
-    color: white;
-  }
-  a:active {
-    color: white;
-  }
 
-  menu {
-    padding: 0;
-  }
-  
-  .list {
-    padding: 0;
-  }
+li a {
+  cursor: pointer;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+menu {
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+.horizontalPlacement {
+  display: inline-flex;
+}

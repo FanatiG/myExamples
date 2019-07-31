@@ -1,0 +1,8 @@
+html {
+    background-color: rgba( 31, 31, 31, 1);
+    background-image: url("../bg/squaresBackground.jpg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: -30vh;
+    color: white;
+  }

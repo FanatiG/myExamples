@@ -5,6 +5,7 @@
 	<title>titlePlaceholder</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../style/thirdPageStyle.css">
+	<link rel="stylesheet" href="../style/jointStyle.css">
 </head>
 
 <body>
@@ -21,7 +22,18 @@
 			<li>пункт меню</li>
 		</ul>
 	</menu>
-	<div></div>
+	<section>
+		<input id="inputData" type="text" size="50" id="submitSpace" autocomplete="off" placeholder="WIP">
+		<button onclick="getDocData()">REQUEST</button>
+		<button onclick="clearP()">CLEAR</button>
+		<p id="getOut1"></p>
+		<p id="getOut2"></p>
+		<p id="getOut3"></p>
+	</section>
+	<section>
+		<p id="objectP"></p>
+	</section>
+	<script src="../src/third.js"></script>
 </body>
 
 </html>
