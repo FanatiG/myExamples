@@ -6,3 +6,7 @@ html {
     background-position-y: -30vh;
     color: white;
   }
+body {
+    margin: 0;
+    /* display: flex; */
+  }

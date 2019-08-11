@@ -24,14 +24,23 @@
 	</menu>
 	<section>
 		<input id="inputData" type="text" size="50" id="submitSpace" autocomplete="off" placeholder="WIP">
-		<button onclick="getDocData()">REQUEST</button>
+		<button onclick="getDoc()">REQUEST</button>
 		<button onclick="clearP()">CLEAR</button>
+		<button id="getDocData" onclick="getDocData()">Get some data</button>
 		<p id="getOut1"></p>
 		<p id="getOut2"></p>
 		<p id="getOut3"></p>
 	</section>
 	<section>
 		<p id="objectP"></p>
+	</section>
+	<section>
+		<form id="my_form" onsubmit="submitForm(); return false;">
+			<p><input id="n" placeholder="Name" required></p>
+			<p><input id="e" placeholder="Email Address" type="email" required></p>
+			<textarea id="m" placeholder="write your message here" rows="10" required></textarea>
+			<p><input id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
+		</form>
 	</section>
 	<script src="../src/third.js"></script>
 </body>
